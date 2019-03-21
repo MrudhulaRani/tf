@@ -33,6 +33,7 @@ resource "aws_network_acl" "nacl-rf" {
     protocol = "-1"
     rule_no = 100
     to_port = 0
+    cidr_block = "0.0.0.0/0"
   }
   egress {
     action = "allow"
@@ -40,6 +41,7 @@ resource "aws_network_acl" "nacl-rf" {
     protocol = "-1"
     rule_no = 100
     to_port = 0
+    cidr_block = "0.0.0.0/0"
   }
   tags {
     Name="nacl_${var.project}"
